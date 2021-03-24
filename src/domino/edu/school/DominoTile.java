@@ -51,6 +51,22 @@ public class DominoTile {
 		this.leftHalf = half;
 	}
 	
+	
+	public boolean equals(DominoTile tile2)
+	{
+		if(this.leftHalf == tile2.leftHalf && this.rightHalf == tile2.rightHalf)
+		{
+			return true;
+		}
+		else if(this.leftHalf == tile2.rightHalf && this.rightHalf == tile2.leftHalf)
+		{
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
 	public String toString() {
 		String res = "";
 		for (int i = 0; i < 3; ++i)
