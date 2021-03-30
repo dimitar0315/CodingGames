@@ -1,11 +1,11 @@
 package domino.edu.school;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 
 public class DominoPlayer {
 	
-	ArrayList<DominoTile> dominos = new ArrayList<DominoTile>();
+	ArrayListt<DominoTile> dominos = new ArrayListt<DominoTile>();
 	String name;
 	
 	
@@ -21,11 +21,21 @@ public class DominoPlayer {
 
 	public void clearTiles() {
 		// TODO Auto-generated method stub
-		dominos = new ArrayList<DominoTile>();
+		dominos = new ArrayListt<DominoTile>();
 	}
 
 	public void addTile(DominoTile tile) {
 		// TODO Auto-generated method stub
 		dominos.add(tile);
 	}
+	
+	
+	public DominoTile fetchTopPairTile() {
+		return null;
+		
+		
+		}
 }
+	
+	
+		

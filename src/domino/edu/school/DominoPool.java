@@ -1,14 +1,15 @@
 package domino.edu.school;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.Random;
 
 public class DominoPool {
-	private ArrayList<DominoTile> tiles = new ArrayList<DominoTile>();
+	private ArrayListt<DominoTile> tiles = new ArrayListt<DominoTile>();
+	private Random rand = new Random();
 
 	public void reset() {
 		// TODO Auto-generated method stub
-		tiles = new ArrayList<DominoTile>();
+		tiles = new ArrayListt<DominoTile>();
 		for(int i = 0; i<=6; i++) {
 			for(int j = i; j<=6; j++) {
 				tiles.add(new DominoTile(DominoDigits.Get(i),DominoDigits.Get(j)));
@@ -20,12 +21,10 @@ public class DominoPool {
 
 	public DominoTile fetchTile() {
 		// TODO Auto-generated method stub
-		Random rand = new Random();
-		
-		int randomNumber = rand.nextInt(tiles.size());
-		
-		return tiles.remove(randomNumber);
-		
+		if (tiles.isEmpty())
+			return null;
+		else
+			return tiles.removeElement(rand.nextInt(tiles.size()));
 	}
 	
 	
