@@ -5,7 +5,7 @@ package domino.edu.school;
 
 public class DominoPlayer {
 	
-	ArrayListt<DominoTile> dominos = new ArrayListt<DominoTile>();
+	LinkedListt<DominoTile> dominos = new LinkedListt<DominoTile>();
 	String name;
 	
 	
@@ -21,7 +21,7 @@ public class DominoPlayer {
 
 	public void clearTiles() {
 		// TODO Auto-generated method stub
-		dominos = new ArrayListt<DominoTile>();
+		dominos = new LinkedListt<DominoTile>();
 	}
 
 	public void addTile(DominoTile tile) {

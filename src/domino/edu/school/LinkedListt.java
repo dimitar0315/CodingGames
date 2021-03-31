@@ -2,9 +2,9 @@ package domino.edu.school;
 
 
 
-public class ArrayListt<T> implements Array<T>   {
+public class LinkedListt<T> implements Listt<T>   {
 	
-	public ArrayListt() {
+	public LinkedListt() {
 		head=null;
 	}
 
@@ -77,18 +77,35 @@ public class ArrayListt<T> implements Array<T>   {
 			else
 				return null;
 		}
-		
 	}
+	
 	public int remove(T item) {
-		// TODO Auto-generated method stub
-		if(head==null) {
+		if (head==null || item==null)
 			return -1;
+		
+		if (head.data == item)
+		{
+			head = head.next;
+			return 0;
 		}
-		
-		
-		
-		
-		return 0;
+		else
+		{
+			int pos = 1;
+			Node<T> prev = head;
+			while(prev.next!=null && prev.next.data!=item)
+			{
+				prev = prev.next;
+				pos++;
+			}
+			if (prev.next!=null) {
+				// => prev.next.data==item
+				prev.next = prev.next.next;
+				return pos;
+			}
+			else {
+				return -1;
+			}
+		}
 	}
 	
 	

@@ -4,12 +4,12 @@ package domino.edu.school;
 import java.util.Random;
 
 public class DominoPool {
-	private ArrayListt<DominoTile> tiles = new ArrayListt<DominoTile>();
+	private LinkedListt<DominoTile> tiles = new LinkedListt<DominoTile>();
 	private Random rand = new Random();
 
 	public void reset() {
 		// TODO Auto-generated method stub
-		tiles = new ArrayListt<DominoTile>();
+		tiles = new LinkedListt<DominoTile>();
 		for(int i = 0; i<=6; i++) {
 			for(int j = i; j<=6; j++) {
 				tiles.add(new DominoTile(DominoDigits.Get(i),DominoDigits.Get(j)));

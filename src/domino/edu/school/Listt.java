@@ -1,6 +1,6 @@
 package domino.edu.school;
 
-public interface Array<T> {
+public interface Listt<T> {
 	
 	void add( T item);
 	void clear();
